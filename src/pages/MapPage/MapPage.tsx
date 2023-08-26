@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container, FormWrap, MapWrap } from "./styles";
-import { KaKaoMap } from "@/components";
+import { FormWrap, MapWrap } from "./styles";
+import { KaKaoMap, PageContainer } from "@/components";
 import { Button, Input } from "antd";
 
 const MapPage: React.FC = () => {
@@ -31,7 +31,7 @@ const MapPage: React.FC = () => {
   }, [handleKeyDown]);
 
   return (
-    <Container>
+    <PageContainer>
       <FormWrap>
         <Input
           placeholder="목적지를 입력하세요."
@@ -42,7 +42,7 @@ const MapPage: React.FC = () => {
       <MapWrap>
         <KaKaoMap address={address} />
       </MapWrap>
-    </Container>
+    </PageContainer>
   );
 };
 
