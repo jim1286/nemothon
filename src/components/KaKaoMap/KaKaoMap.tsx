@@ -1,15 +1,14 @@
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { Map, CustomOverlayMap } from "react-kakao-maps-sdk";
 import React, { useEffect, useState } from "react";
-import { notification } from "antd";
+import { Button, Popconfirm, notification } from "antd";
 import { BR } from "@/theme";
-import { nanoid } from "@reduxjs/toolkit";
+import { RocketOutlined } from "@ant-design/icons";
 
 interface KaKaoMapProps {
   address: string;
 }
 
 const KaKaoMap: React.FC<KaKaoMapProps> = ({ address }) => {
-  const [info, setInfo] = useState<any>();
   const [marker, setMarker] = useState<any>();
   const [map, setMap] = useState<any>();
 
@@ -60,23 +59,34 @@ const KaKaoMap: React.FC<KaKaoMapProps> = ({ address }) => {
       onCreate={setMap}
     >
       {marker && (
-        <MapMarker
-          key={nanoid()}
-          position={marker.position}
-          onClick={() => setInfo(marker)}
-        >
-          {info && info.content === marker.content && (
+        <CustomOverlayMap position={marker.position}>
+          <Popconfirm
+            placement="top"
+            title={"목적지"}
+            description={"설명"}
+            // onConfirm={confirm}
+            okText="Yes"
+            cancelText="No"
+            style={{
+              width: "200px",
+              height: "100px",
+            }}
+          >
             <div
               style={{
-                width: "150px",
-                textAlign: "center",
-                padding: "6px 0",
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "lightGray",
               }}
             >
-              {marker.content}
+              <RocketOutlined />
             </div>
-          )}
-        </MapMarker>
+          </Popconfirm>
+        </CustomOverlayMap>
       )}
     </Map>
   );
