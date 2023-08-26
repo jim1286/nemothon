@@ -1,6 +1,6 @@
 import App from "@/App";
 import { Error, MainWrap } from "@/components";
-import { MapPage, RangeMoneyPage } from "@/pages";
+import { MapPage, RangeMoneyPage, RoutePage } from "@/pages";
 import { createBrowserRouter } from "react-router-dom";
 
 const Router = createBrowserRouter([
@@ -20,6 +20,10 @@ const Router = createBrowserRouter([
           {
             path: "/range",
             element: <RangeMoneyPage />,
+          },
+          {
+            path: "/route",
+            element: <RoutePage />,
           },
         ],
       },
