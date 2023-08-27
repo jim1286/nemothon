@@ -1,1 +1,1 @@
-export * from "./BusStationList.const";
+export * from "./Location.const";

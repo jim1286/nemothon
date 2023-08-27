@@ -1,18 +1,19 @@
 import { ApiResponse } from "@/interface";
 import axios, { AxiosRequestConfig } from "axios";
 
+const { VITE_BASE_URL, VITE_KAKAO_RESTAPI_KEY } = import.meta.env;
+
 const api = axios.create({
-  baseURL: "",
+  baseURL: VITE_BASE_URL,
   timeout: 1000 * 15,
 });
 
 export const get = async (
   url: string,
   params: any = null,
-  secure = false,
   timeout?: number
 ): Promise<ApiResponse> => {
-  const configs: AxiosRequestConfig = await getConfig(params, secure);
+  const configs: AxiosRequestConfig = await getConfig(params);
 
   if (timeout) {
     configs.timeout = timeout;
@@ -27,10 +28,9 @@ export const post = async (
   url: string,
   data: any,
   customHeader: any = {},
-  secure = false,
   timeout?: number
 ): Promise<any> => {
-  const configs: any = await getConfig(null, secure);
+  const configs: any = await getConfig(null);
 
   if (timeout) {
     configs.timeout = timeout;
@@ -50,10 +50,9 @@ export const post = async (
 export const put = async (
   url: string,
   data: any,
-  secure = false,
   timeout?: number
 ): Promise<ApiResponse> => {
-  const configs: AxiosRequestConfig = await getConfig(null, secure);
+  const configs: AxiosRequestConfig = await getConfig(null);
 
   if (timeout) {
     configs.timeout = timeout;
@@ -67,10 +66,9 @@ export const put = async (
 export const deleteMethod = async (
   url: string,
   params: any = null,
-  secure = false,
   timeout?: number
 ): Promise<ApiResponse> => {
-  const configs: AxiosRequestConfig = await getConfig(params, secure);
+  const configs: AxiosRequestConfig = await getConfig(params);
 
   if (timeout) {
     configs.timeout = timeout;
@@ -93,28 +91,19 @@ export function serialize(obj: any) {
   return str;
 }
 
-const getConfig = async (
-  payload: any = null,
-  secure: boolean
-): Promise<AxiosRequestConfig> =>
+const getConfig = async (payload: any = null): Promise<AxiosRequestConfig> =>
   new Promise((resolve, reject) => {
     const config: AxiosRequestConfig = {
       ...payload,
     };
 
     try {
-      if (secure) {
-        try {
-          // const tokens = TokenService.getTokens();
-          // const accessToken = tokens?.accessToken;
-          // if (accessToken) {
-          //   config.headers = {
-          //     Authorization: `Bearer ${accessToken}`,
-          //   };
-          // }
-        } catch (error) {
-          config.headers = {};
-        }
+      config.headers = {};
+
+      if (VITE_KAKAO_RESTAPI_KEY) {
+        config.headers = {
+          Authorization: `KakaoAK ${VITE_KAKAO_RESTAPI_KEY}`,
+        };
       }
     } catch (e) {
       reject(e);

@@ -1,3 +1,3 @@
 export * from "./MapPage";
 export * from "./RangeMoneyPage";
-export * from "./RoutePage";
+export * from "./SuggestPage";
