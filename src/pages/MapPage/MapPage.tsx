@@ -4,17 +4,20 @@ import { KaKaoMap, PageContainer } from "@/components";
 import { Button, Input, notification } from "antd";
 import { BR } from "@/theme";
 import { DestinationsService } from "@/service";
-import { suggestionBusRouteList } from "@/constant";
+import { suggestionBusRouteList, busRouteList } from "@/constant";
 import {
-  BusRoute,
   Destination,
   Origin,
+  Result,
   getMultiDestinationDirectionsRequest,
 } from "@/interface";
 import { useNavigate } from "react-router-dom";
+import { TaxiFeeUtil } from "@/utils";
+import { setResultList, useAppDispatch } from "@/flux";
 
 const MapPage: React.FC = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const [input, setInput] = useState<string | null>(null);
   const [address, setAddress] = useState<string>("");
 
@@ -65,9 +68,33 @@ const MapPage: React.FC = () => {
         params
       );
 
-      console.log(response.routes);
+      const durationList = busRouteList
+        .map((busRoute) => busRoute.busStationList)
+        .flat()
+        .map((busStation) => busStation.duration);
 
-      // navigate("/suggest");
+      const resultList = response.routes
+        .map((route, index) => {
+          if (route.result_code === 304) {
+            return;
+          }
+
+          const taxiFee = TaxiFeeUtil.getTaxiFee(route.summary.distance);
+          let duration = 0;
+
+          for (let i = 0; i < index + 1; i++) {
+            duration += durationList[i];
+          }
+
+          return {
+            taxiFee: taxiFee,
+            timeReduction: duration - route.summary.duration,
+          };
+        })
+        .filter((val) => val);
+
+      dispatch(setResultList(resultList as Result[]));
+      navigate("/suggest");
     } catch (error) {
       console.log(error);
 

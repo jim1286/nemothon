@@ -1,12 +1,12 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import store from "../store";
-import tempReducer from "./temp.slice";
+import routeReducer from "./route.slice";
 
 export default combineReducers({
-  temp: tempReducer,
+  route: routeReducer,
 });
 
 export const useAppDispatch = () => useDispatch<typeof store.dispatch>();
 
-export * from "./temp.slice";
+export * from "./route.slice";

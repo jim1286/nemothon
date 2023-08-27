@@ -3,7 +3,10 @@ export interface Location {
   address: string;
   latitude: string;
   longitude: string;
-  last?: number;
+}
+
+export interface BusStation extends Location {
+  duration: number;
 }
 
 export interface Destination {
@@ -30,5 +33,10 @@ export interface SuggestionBusRouteList {
 
 export interface BusRoute {
   busNumber: number;
-  busStationList: Location[];
+  busStationList: BusStation[];
+}
+
+export interface Result {
+  taxiFee: number;
+  timeReduction: number;
 }

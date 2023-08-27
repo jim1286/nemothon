@@ -1,1 +1,1 @@
-export * from './temp.hook';
+export * from "./route.hook";
