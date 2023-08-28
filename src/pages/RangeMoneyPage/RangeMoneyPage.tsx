@@ -10,8 +10,15 @@ import {
 import React from "react";
 import { H5 } from "@/theme";
 import { Button, InputNumber } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const RangeMoneyPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/map");
+  };
+
   return (
     <PageContainer>
       <RangeWrap>
@@ -28,7 +35,7 @@ const RangeMoneyPage: React.FC = () => {
         <RangeFooter>
           <ButtonWrap>
             <Button>{`초기화`}</Button>
-            <Button type="primary">{`완료`}</Button>
+            <Button type="primary" onClick={handleClick}>{`완료`}</Button>
           </ButtonWrap>
         </RangeFooter>
       </RangeWrap>

@@ -1,14 +1,15 @@
 import { Map, CustomOverlayMap } from "react-kakao-maps-sdk";
 import React, { useEffect, useState } from "react";
-import { Button, Popconfirm, notification } from "antd";
+import { Popconfirm, notification } from "antd";
 import { BR } from "@/theme";
 import { RocketOutlined } from "@ant-design/icons";
 
 interface KaKaoMapProps {
   address: string;
+  onClick: () => void;
 }
 
-const KaKaoMap: React.FC<KaKaoMapProps> = ({ address }) => {
+const KaKaoMap: React.FC<KaKaoMapProps> = ({ address, onClick }) => {
   const [marker, setMarker] = useState<any>();
   const [map, setMap] = useState<any>();
 
@@ -53,7 +54,7 @@ const KaKaoMap: React.FC<KaKaoMapProps> = ({ address }) => {
 
   return (
     <Map
-      center={{ lat: 33.5563, lng: 126.79581 }}
+      center={{ lat: 37.5283169, lng: 126.9294254 }}
       style={{ width: "100%", height: "100%" }}
       level={3}
       onCreate={setMap}
@@ -64,7 +65,7 @@ const KaKaoMap: React.FC<KaKaoMapProps> = ({ address }) => {
             placement="top"
             title={"목적지"}
             description={"설명"}
-            // onConfirm={confirm}
+            onConfirm={onClick}
             okText="Yes"
             cancelText="No"
             style={{

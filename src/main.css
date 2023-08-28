@@ -2,6 +2,22 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f9f9f9;
+    box-shadow: inset 0px 0px 5px white;
+  }
 }
 
 h1,
@@ -39,10 +55,18 @@ h6 {
   cursor: pointer;
 }
 
+.ant-popover-inner {
+  border-radius: 4px !important;
+}
+
+.ant-popover-inner-content {
+  padding: 0 !important;
+}
+
 #sortSelect {
   padding-top: 0 !important;
   top: 20px !important;
-  left: -60px !important;
+  left: 17px !important;
 }
 
 .szh-menu__item--type-radio::before {
@@ -68,4 +92,24 @@ h6 {
   font-weight: bold !important;
   font-size: 16px !important;
   padding-bottom: 10px;
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("fonts/pretendard/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("fonts/pretendard/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("fonts/pretendard/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/pretendard/Pretendard-Regular.woff") format("woff");
 }
