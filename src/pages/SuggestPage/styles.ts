@@ -6,6 +6,17 @@ export const Container = styled.div`
   border: 1px solid;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+`;
+
+export const Image = styled.img`
+  width: 393px;
+  height: 54px;
+`;
+
+export const Body = styled.div`
+  width: 393px;
+  height: 696px;
 `;
 
 export const Header = styled.div`
@@ -34,7 +45,9 @@ export const InputWrap = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  width: 100%;
-  height: 600px;
+  width: 99%;
+  height: 535px;
   overflow-y: auto;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 `;

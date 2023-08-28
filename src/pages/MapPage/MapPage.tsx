@@ -14,6 +14,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { TaxiFeeUtil } from "@/utils";
 import { setResultList, useAppDispatch } from "@/flux";
+import iPhone_Header from "@/assets/iPhone_Header.png";
+import iPhone_Icon from "@/assets/iPhone_Icon.png";
 
 const MapPage: React.FC = () => {
   const navigate = useNavigate();
@@ -115,7 +117,7 @@ const MapPage: React.FC = () => {
           placeholder="목적지를 입력하세요."
           onChange={(e) => setInput(e.target.value)}
         />
-        <Button onClick={handleClick}>{"검색"}</Button>
+        <Button>{"검색"}</Button>
       </FormWrap>
       <MapWrap>
         <KaKaoMap address={address} onClick={handleClick} />

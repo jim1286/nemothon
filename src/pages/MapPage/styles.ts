@@ -12,12 +12,17 @@ export const Container = styled.div`
 export const FormWrap = styled.div`
   width: 310px;
   z-index: 9999;
-  top: 150px;
+  top: 170px;
   display: flex;
   position: absolute;
 `;
 
 export const MapWrap = styled.div`
-  width: 391px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
+
+  #react-kakao-maps-sdk-map-container {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 `;

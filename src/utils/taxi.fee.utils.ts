@@ -5,5 +5,5 @@ export const getTaxiFee = (distance: number) => {
 
   const feeByMiter = 1.3;
 
-  return distance * feeByMiter;
+  return Math.floor(distance * feeByMiter);
 };
