@@ -5,7 +5,7 @@ export interface Location {
   longitude: string;
 }
 
-export interface BusStation extends Location {
+export interface Station extends Location {
   duration: number;
 }
 
@@ -25,18 +25,14 @@ export interface Estimated {
   duration: number;
 }
 
-export interface SuggestionBusRouteList {
-  origin: Location;
-  busRouteList: BusRoute[];
-  estimated: Estimated;
-}
-
-export interface BusRoute {
-  busNumber: number;
-  busStationList: BusStation[];
+export interface Route {
+  name: number;
+  stationList: Station[];
 }
 
 export interface Result {
   taxiFee: number;
   timeReduction: number;
+  stationName: string;
+  address: string;
 }

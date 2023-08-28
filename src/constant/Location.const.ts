@@ -1,9 +1,4 @@
-import {
-  BusRoute,
-  Estimated,
-  Location,
-  SuggestionBusRouteList,
-} from "@/interface";
+import { Route, Estimated, Location } from "@/interface";
 
 export const origin: Location = {
   name: "스시진초밥",
@@ -12,10 +7,10 @@ export const origin: Location = {
   longitude: "126.9319037",
 };
 
-export const busRouteList: BusRoute[] = [
+export const routeList: Route[] = [
   {
-    busNumber: 7212,
-    busStationList: [
+    name: 7212,
+    stationList: [
       {
         name: "불광역.불광1동주민센터",
         address: "서울 은평구 불광동 285-14",
@@ -82,8 +77,8 @@ export const busRouteList: BusRoute[] = [
     ],
   },
   {
-    busNumber: 571,
-    busStationList: [
+    name: 571,
+    stationList: [
       {
         name: "신흥시장",
         address: "서울 은평구 신사동 38-10",
@@ -284,13 +279,7 @@ export const busRouteList: BusRoute[] = [
   },
 ];
 
-export const estimated: Estimated = {
+export const totalEstimated: Estimated = {
   distance: 16000,
   duration: 4200,
-};
-
-export const suggestionBusRouteList: SuggestionBusRouteList = {
-  origin: origin,
-  busRouteList: busRouteList,
-  estimated: estimated,
 };

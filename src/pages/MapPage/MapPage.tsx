@@ -4,7 +4,7 @@ import { KaKaoMap, PageContainer } from "@/components";
 import { Button, Input, notification } from "antd";
 import { BR } from "@/theme";
 import { DestinationsService } from "@/service";
-import { suggestionBusRouteList, busRouteList } from "@/constant";
+import { origin, routeList } from "@/constant";
 import {
   Destination,
   Origin,
@@ -39,27 +39,23 @@ const MapPage: React.FC = () => {
   const handleClick = async () => {
     try {
       const destinations: Destination[] = [];
-      const busStationList = suggestionBusRouteList.busRouteList
-        .map((busRoute) =>
-          busRoute.busStationList.map((busStation) => busStation)
-        )
-        .flat();
+      const stationList = routeList.map((route) => route.stationList).flat();
 
       for (let i = 0; i < 30; i++) {
         destinations.push({
-          x: busStationList[i].longitude,
-          y: busStationList[i].latitude,
+          x: stationList[i].longitude,
+          y: stationList[i].latitude,
           key: String(i),
         });
       }
 
-      const origin: Origin = {
-        x: suggestionBusRouteList.origin.longitude,
-        y: suggestionBusRouteList.origin.latitude,
+      const originLocation: Origin = {
+        x: origin.longitude,
+        y: origin.latitude,
       };
 
       const params: getMultiDestinationDirectionsRequest = {
-        origin: origin,
+        origin: originLocation,
         destinations: destinations,
         radius: 10000,
       };
@@ -68,10 +64,7 @@ const MapPage: React.FC = () => {
         params
       );
 
-      const durationList = busRouteList
-        .map((busRoute) => busRoute.busStationList)
-        .flat()
-        .map((busStation) => busStation.duration);
+      const durationList = stationList.map((busStation) => busStation.duration);
 
       const resultList = response.routes
         .map((route, index) => {
@@ -89,6 +82,8 @@ const MapPage: React.FC = () => {
           return {
             taxiFee: taxiFee,
             timeReduction: duration - route.summary.duration,
+            stationName: stationList[index].name,
+            address: stationList[index].address,
           };
         })
         .filter((val) => val);

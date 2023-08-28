@@ -36,7 +36,5 @@ export const InputWrap = styled.div`
 export const CardContainer = styled.div`
   width: 100%;
   height: 600px;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto !important;
+  overflow-y: auto;
 `;

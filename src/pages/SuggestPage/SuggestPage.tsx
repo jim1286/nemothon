@@ -4,7 +4,6 @@ import {
   Container,
   InputWrap,
   InputContainer,
-  Body,
   CardContainer,
 } from "./styles";
 import { Input } from "antd";
@@ -14,8 +13,7 @@ import { SuggestCard } from "./components";
 import { nanoid } from "@reduxjs/toolkit";
 
 const SuggestPage: React.FC = () => {
-  const resultList = [1, 2, 3, 4, 5, 6, 7];
-  // const resultList = useResultListSelector();
+  const resultList = useResultListSelector();
 
   return (
     <Container>
@@ -33,7 +31,7 @@ const SuggestPage: React.FC = () => {
       </Header>
       <CardContainer>
         {resultList.map((result) => (
-          <SuggestCard key={nanoid()} />
+          <SuggestCard key={nanoid()} result={result} />
         ))}
       </CardContainer>
     </Container>
