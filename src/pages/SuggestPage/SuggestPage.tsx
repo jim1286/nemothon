@@ -13,16 +13,14 @@ import { CloseOutlined, SwapOutlined } from "@ant-design/icons";
 import { useResultListSelector } from "@/flux";
 import { SuggestCard } from "./components";
 import { nanoid } from "@reduxjs/toolkit";
-import iPhone_Header from "@/assets/iPhone_Header.png";
-import iPhone_Icon from "@/assets/iPhone_Icon.png";
+import notch from "@/assets/notch.png";
 
 const SuggestPage: React.FC = () => {
   const resultList = useResultListSelector();
 
   return (
     <Container>
-      <Image src={iPhone_Header} />
-      <Image src={iPhone_Icon} style={{ position: "absolute" }} />
+      <Image src={notch} />
       <Body>
         <Header>
           <InputContainer>

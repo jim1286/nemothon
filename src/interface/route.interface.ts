@@ -36,3 +36,8 @@ export interface Result {
   stationName: string;
   address: string;
 }
+
+export interface MoneyRange {
+  minMoney: number;
+  maxMoney: number;
+}

@@ -6,3 +6,9 @@ export const useResultListSelector = () => {
 
   return resultList;
 };
+
+export const useMoneyRangeListSelector = () => {
+  const moneyRange = useSelector((state: RootState) => state.route.moneyRange);
+
+  return moneyRange;
+};

@@ -1,25 +1,47 @@
 import React, { useEffect, useState } from "react";
-import { FormWrap, MapWrap } from "./styles";
+import {
+  FormWrap,
+  InputWrap,
+  MapWrap,
+  ModalBody,
+  RangeFooter,
+  TaxiLabel,
+} from "./styles";
 import { KaKaoMap, PageContainer } from "@/components";
-import { Button, Input, notification } from "antd";
-import { BR } from "@/theme";
+import { Button, Input, InputNumber, Modal, notification } from "antd";
+import { BM, BR, H5M } from "@/theme";
 import { DestinationsService } from "@/service";
 import { origin, routeList } from "@/constant";
 import {
   Destination,
+  MoneyRange,
   Origin,
   Result,
   getMultiDestinationDirectionsRequest,
 } from "@/interface";
 import { useNavigate } from "react-router-dom";
 import { TaxiFeeUtil } from "@/utils";
-import { setResultList, useAppDispatch } from "@/flux";
+import {
+  setMoneyRange,
+  setResultList,
+  useAppDispatch,
+  useMoneyRangeListSelector,
+} from "@/flux";
+import { SearchOutlined } from "@ant-design/icons";
+import taxiIcon from "@/assets/taxiIcon.png";
+import "./model.css";
 
 const MapPage: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const moneyRange = useMoneyRangeListSelector();
   const [input, setInput] = useState<string | null>(null);
   const [address, setAddress] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [money, setMoney] = useState<MoneyRange>({
+    minMoney: moneyRange.minMoney,
+    maxMoney: moneyRange.maxMoney,
+  });
 
   const handleSearch = () => {
     if (!input) {
@@ -27,6 +49,24 @@ const MapPage: React.FC = () => {
     }
 
     setAddress(input);
+  };
+
+  const handleMinMoney = (value: number | null) => {
+    if (value === null) {
+      setMoney({ ...money, minMoney: 4800 });
+      return;
+    }
+
+    setMoney({ ...money, minMoney: value });
+  };
+
+  const handleMaxMoney = (value: number | null) => {
+    if (value === null) {
+      setMoney({ ...money, maxMoney: money.minMoney + 1000 });
+      return;
+    }
+
+    setMoney({ ...money, maxMoney: value });
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -100,6 +140,19 @@ const MapPage: React.FC = () => {
     }
   };
 
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    dispatch(setMoneyRange(money));
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
 
@@ -115,11 +168,60 @@ const MapPage: React.FC = () => {
           placeholder="목적지를 입력하세요."
           onChange={(e) => setInput(e.target.value)}
         />
-        <Button>{"검색"}</Button>
+        <Button icon={<SearchOutlined />} type="primary" />
+        <TaxiLabel onClick={showModal}>
+          <img src={taxiIcon} />
+          <BM color="white">{`${moneyRange.minMoney.toLocaleString()}원`}</BM>
+          <BM color="white">{`~`}</BM>
+          <BM color="white">{`${moneyRange.maxMoney.toLocaleString()}원`}</BM>
+        </TaxiLabel>
       </FormWrap>
       <MapWrap>
         <KaKaoMap address={address} onClick={handleClick} />
       </MapWrap>
+      <Modal
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        closeIcon={false}
+        width={300}
+        centered
+      >
+        <ModalBody>
+          <H5M>{`택시 요금을 설정해 주세요`}</H5M>
+          <InputWrap>
+            <InputNumber
+              controls={false}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+              }}
+              min={4800}
+              max={money.maxMoney - 1000}
+              defaultValue={money.minMoney}
+              value={money.minMoney}
+              onChange={handleMinMoney}
+            />
+            <BM>{"~"}</BM>
+            <InputNumber
+              controls={false}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+              }}
+              min={money.minMoney + 1000}
+              max={100000}
+              defaultValue={money.maxMoney}
+              value={money.maxMoney}
+              onChange={handleMaxMoney}
+            />
+          </InputWrap>
+          <RangeFooter>
+            <Button onClick={handleCancel}>{`취소`}</Button>
+            <Button type="primary" onClick={handleOk}>{`완료`}</Button>
+          </RangeFooter>
+        </ModalBody>
+      </Modal>
     </PageContainer>
   );
 };

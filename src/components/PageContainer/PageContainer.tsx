@@ -1,17 +1,26 @@
 import React from "react";
 import { Body, Container, Header } from "./styles";
-import iPhone_Header from "@/assets/iPhone_Header.png";
-import iPhone_Icon from "@/assets/iPhone_Icon.png";
+import notch from "@/assets/notch.png";
+import white_notch from "@/assets/white_notch.png";
 
 interface PageContainerProps {
   children?: React.ReactNode;
+  image?: string;
 }
 
-const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
+const PageContainer: React.FC<PageContainerProps> = ({ children, image }) => {
   return (
     <Container>
-      <Header src={iPhone_Header} />
-      <Header src={iPhone_Icon} style={{ position: "absolute" }} />
+      <img
+        src={image}
+        width="393px"
+        height="750px"
+        style={{ borderRadius: "20px", position: "absolute", zIndex: "-1" }}
+      />
+      <Header
+        src={image ? white_notch : notch}
+        style={{ position: "absolute", zIndex: "9999" }}
+      />
       <Body>{children}</Body>
     </Container>
   );
