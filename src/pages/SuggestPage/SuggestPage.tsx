@@ -19,12 +19,13 @@ import { TaxiRangeLabel } from "@/components";
 import { FlexRow, Spacer } from "@/components/Base";
 import { response_1, response_2, response_3 } from "@/constant/Response.const";
 import { Info } from "@/interface";
+import { useMoneyRangeListSelector } from "@/flux";
 
 const SuggestPage: React.FC = () => {
   const [option, setOption] = useState("");
+  const moneyRangeList = useMoneyRangeListSelector();
 
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
     setOption(value);
   };
 
@@ -38,14 +39,14 @@ const SuggestPage: React.FC = () => {
             <InputWrap>
               <Input
                 placeholder="출발지 주소"
-                defaultValue={response_2.location.start}
+                defaultValue={response_3.location.start}
               ></Input>
               <CloseOutlined />
             </InputWrap>
             <InputWrap>
               <Input
                 placeholder="목적지 주소"
-                defaultValue={response_2.location.end}
+                defaultValue={response_3.location.end}
               ></Input>
               <SwapOutlined />
             </InputWrap>
@@ -78,9 +79,16 @@ const SuggestPage: React.FC = () => {
         </FlexRow>
         <Divider />
         <CardContainer>
-          {response_2.infoList.map((info: Info) => (
-            <SuggestCard key={nanoid()} info={info} />
-          ))}
+          {response_3.infoList.map((info: Info) => {
+            if (
+              moneyRangeList.minMoney > info.summary.taxiFare ||
+              moneyRangeList.maxMoney < info.summary.taxiFare
+            ) {
+              return null;
+            }
+
+            return <SuggestCard key={nanoid()} info={info} />;
+          })}
         </CardContainer>
       </Body>
     </Container>
