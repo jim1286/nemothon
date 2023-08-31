@@ -14,7 +14,7 @@ const PageContainer: React.FC<PageContainerProps> = ({ children, image }) => {
       <img
         src={image}
         width="393px"
-        height="750px"
+        height="852px"
         style={{ borderRadius: "20px", position: "absolute", zIndex: "-1" }}
       />
       <Header

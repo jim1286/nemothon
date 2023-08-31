@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormWrap = styled.div`
   width: 310px;
   z-index: 1000;
-  top: 170px;
+  top: 120px;
   display: flex;
   position: absolute;
 `;

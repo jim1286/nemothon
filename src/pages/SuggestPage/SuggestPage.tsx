@@ -14,6 +14,7 @@ import { useResultListSelector } from "@/flux";
 import { SuggestCard } from "./components";
 import { nanoid } from "@reduxjs/toolkit";
 import notch from "@/assets/notch.png";
+import { TaxiRangeLabel } from "@/components";
 
 const SuggestPage: React.FC = () => {
   const resultList = useResultListSelector();
@@ -33,6 +34,7 @@ const SuggestPage: React.FC = () => {
               <SwapOutlined />
             </InputWrap>
           </InputContainer>
+          <TaxiRangeLabel />
         </Header>
         <CardContainer>
           {resultList.map((result) => (

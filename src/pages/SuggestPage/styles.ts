@@ -22,6 +22,7 @@ export const Body = styled.div`
 export const Header = styled.div`
   width: 100%;
   height: 150px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

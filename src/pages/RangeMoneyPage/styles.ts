@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ImageWrap = styled.img`
   width: 100%;
-  height: 1005%;
+  height: 100%;
 `;
 
 export const RangeWrap = styled.div`
@@ -11,19 +11,21 @@ export const RangeWrap = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(34, 34, 34, 0.8);
 `;
 
 export const RangeHeader = styled.div`
   width: 100%;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 export const RangeBody = styled.div`
-  flex: 1;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +48,7 @@ export const InputWrap = styled.div`
 
 export const RangeFooter = styled.div`
   width: 350px;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
