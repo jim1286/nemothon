@@ -7,22 +7,33 @@ import { ReactComponent as Taxi } from "@/assets/svg/taxi.svg";
 import { ReactComponent as Bus } from "@/assets/svg/bug.svg";
 import { ReactComponent as Ellipse } from "@/assets/svg/ellipse.svg";
 import { ReactComponent as Walk } from "@/assets/svg/walk.svg";
+import { Click } from "../../RoutePage";
 
 interface RouteBarProps {
   mode: ModeEnum;
   step: Step;
-  isClicked: boolean;
+  index: number;
+  clickList: Click[] | undefined;
 }
 
-const RouteBar: React.FC<RouteBarProps> = ({ mode, step, isClicked }) => {
+const RouteBar: React.FC<RouteBarProps> = ({
+  mode,
+  step,
+  index,
+  clickList,
+}) => {
   switch (mode) {
     case ModeEnum.BUS: {
+      if (!clickList) {
+        return;
+      }
+
       return (
         <>
           <Label style={{ backgroundColor: "#34447F" }}>
             <SvgIcon icon={<Bus />} />
           </Label>
-          {isClicked ? (
+          {clickList[index].clicked ? (
             step.stationList.map((_, index) => {
               if (index === 0) {
                 return (

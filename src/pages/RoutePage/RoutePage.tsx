@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Body,
   Container,
@@ -17,10 +17,19 @@ import { ReactComponent as Location } from "@/assets/svg/location.svg";
 import white_notch from "@/assets/white_notch.png";
 import { nanoid } from "@reduxjs/toolkit";
 
+export interface Click {
+  clicked: boolean;
+}
+
 const RoutePage: React.FC = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const [open, setOpen] = useState(false);
   const clickedInfo = useClickedInfoSelector();
+  const stepClickList: Click[] | undefined = useMemo(() => {
+    return clickedInfo?.steps.map(() => ({
+      clicked: false,
+    }));
+  }, [clickedInfo]);
+  const [clickList, setClickList] = useState(stepClickList);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -34,8 +43,15 @@ const RoutePage: React.FC = () => {
     setOpen(false);
   };
 
-  const handleDrawer = () => {
-    setIsClicked((prev) => !prev);
+  const handleDrawer = (index: number) => {
+    if (!clickList) {
+      return;
+    }
+
+    const newClickList = [...clickList];
+    newClickList[index].clicked = !clickList[index].clicked;
+
+    setClickList(newClickList);
   };
 
   return (
@@ -60,26 +76,28 @@ const RoutePage: React.FC = () => {
             }}
           >
             {clickedInfo &&
-              clickedInfo.steps.map((step) => (
+              clickedInfo.steps.map((step, index) => (
                 <RouteBar
                   key={nanoid()}
+                  index={index}
                   mode={step.mode as ModeEnum}
                   step={step}
-                  isClicked={isClicked}
+                  clickList={clickList}
                 />
               ))}
             <SvgIcon icon={<Location />} />
           </FlexColumn>
           <FlexColumn style={{ flex: 1, padding: "20px 20px 20px 0" }}>
             {clickedInfo &&
-              clickedInfo.steps.map((step) => (
+              clickedInfo.steps.map((step, index) => (
                 <RouteTitle
                   key={nanoid()}
+                  index={index}
                   step={step}
                   mode={step.mode as ModeEnum}
                   title={step.stationList[0]}
                   sectionTime={step.sectionTime}
-                  isClicked={isClicked}
+                  clickList={clickList}
                   onOpen={handleOpen}
                   onDrawer={handleDrawer}
                 />

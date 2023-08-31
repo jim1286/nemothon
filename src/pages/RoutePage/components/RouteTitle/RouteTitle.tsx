@@ -8,15 +8,17 @@ import { ReactComponent as Up } from "@/assets/svg/up.svg";
 import { ReactComponent as Down } from "@/assets/svg/down.svg";
 import { useClickedInfoSelector } from "@/flux";
 import { TaxiLabel } from "./styles";
+import { Click } from "../../RoutePage";
 
 interface RouteTitleProps {
   step: Step;
   mode: ModeEnum;
   title: string;
+  index: number;
   sectionTime: number;
-  isClicked: boolean;
+  clickList: Click[] | undefined;
   onOpen: () => void;
-  onDrawer: () => void;
+  onDrawer: (index: number) => void;
 }
 
 const RouteTitle: React.FC<RouteTitleProps> = ({
@@ -24,7 +26,8 @@ const RouteTitle: React.FC<RouteTitleProps> = ({
   mode,
   title,
   sectionTime,
-  isClicked,
+  index,
+  clickList,
   onOpen,
   onDrawer,
 }) => {
@@ -32,28 +35,32 @@ const RouteTitle: React.FC<RouteTitleProps> = ({
 
   switch (mode) {
     case ModeEnum.BUS: {
+      if (!clickList) {
+        return;
+      }
+
       return (
         <FlexColumn style={{ minHeight: "144px" }}>
           <BM>{title}</BM>
           <Spacer space={10} />
           <FlexRow style={{ alignItems: "center" }}>
             <BS>{`${Math.ceil(sectionTime / 60)}분 이동`}</BS>
-            {isClicked ? (
+            {clickList[index].clicked ? (
               <SvgIcon
                 icon={<Up />}
                 style={{ cursor: "pointer" }}
-                onClick={onDrawer}
+                onClick={() => onDrawer(index)}
               />
             ) : (
               <SvgIcon
                 icon={<Down />}
                 style={{ cursor: "pointer" }}
-                onClick={onDrawer}
+                onClick={() => onDrawer(index)}
               />
             )}
           </FlexRow>
           <Spacer space={20} />
-          {isClicked &&
+          {clickList[index].clicked &&
             step.stationList.map((station) => (
               <BXS style={{ height: "35px" }}>{`${station}`}</BXS>
             ))}
