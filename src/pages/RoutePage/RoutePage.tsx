@@ -29,11 +29,13 @@ import { BB, BM, BS, BXS, H5M } from "@/theme";
 import { useClickedInfoSelector } from "@/flux";
 import { ModeEnum } from "@/enums";
 import { Step } from "@/interface";
+import { useNavigate } from "react-router-dom";
 
 const RoutePage: React.FC = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [open, setOpen] = useState(false);
   const clickedInfo = useClickedInfoSelector();
+  const navigate = useNavigate();
 
   const RenderTitle = (
     mode: ModeEnum,
@@ -84,7 +86,7 @@ const RoutePage: React.FC = () => {
                   </>
                 );
               })}
-            <Spacer space={25} />
+            <Spacer space={20} />
           </FlexColumn>
         );
       }
@@ -206,9 +208,13 @@ const RoutePage: React.FC = () => {
             marginTop: "50px",
           }}
         >
-          <SvgIcon icon={<Left />} />
+          <SvgIcon
+            icon={<Left />}
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/suggest")}
+          />
           <Input />
-          <SvgIcon icon={<Close />} />
+          <SvgIcon icon={<Close />} style={{ cursor: "pointer" }} />
         </FlexRow>
       </Header>
       <Body>

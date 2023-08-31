@@ -16,6 +16,13 @@ interface RangeBarProps {
 
 const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime, info }) => {
   const RenderBar = (mode: ModeEnum, sectionTime: number) => {
+    if (!wastedTime) {
+      return;
+    }
+
+    const percent = (sectionTime / wastedTime) * 100;
+    const minute = Math.ceil(sectionTime / 60);
+
     switch (mode) {
       case ModeEnum.BUS: {
         return (
@@ -24,13 +31,14 @@ const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime, info }) => {
               <SvgIcon icon={<Bus />} />
             </Label>
             <Bar
+              percent={percent}
               style={{
                 backgroundColor: "#34447F",
                 borderTopRightRadius: "6px",
                 borderBottomRightRadius: "6px",
               }}
             >
-              <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+              <BS color="white">{`${minute}분`}</BS>
             </Bar>
           </>
         );
@@ -41,8 +49,8 @@ const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime, info }) => {
             <Label>
               <SvgIcon icon={<Taxi />} />
             </Label>
-            <Bar>
-              <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+            <Bar percent={percent}>
+              <BS color="white">{`${minute}분`}</BS>
             </Bar>
           </>
         );
@@ -50,13 +58,14 @@ const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime, info }) => {
       case ModeEnum.WALK: {
         return (
           <Bar
+            percent={percent}
             style={{
               backgroundColor: "#D0D0D0",
               borderTopRightRadius: "6px",
               borderBottomRightRadius: "6px",
             }}
           >
-            <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+            <BS color="white">{`${minute}분`}</BS>
           </Bar>
         );
       }

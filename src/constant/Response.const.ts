@@ -2,7 +2,8 @@ import { SuggestResponse } from "@/interface";
 
 export const response_1: SuggestResponse = {
   location: {
-    address: "경기 용인시 기흥구 동백1로 31",
+    start: "경기 용인시 기흥구 동백1로 31",
+    end: "강남역 카카오 프렌즈",
   },
   stationInfo: {
     "초당중학교.삼부르네상스아파트": {
@@ -932,7 +933,8 @@ export const response_1: SuggestResponse = {
 
 export const response_2: SuggestResponse = {
   location: {
-    address: "스시진초밥",
+    start: "스시진초밥",
+    end: "서울 양천구 신정동 330",
   },
   stationInfo: {
     새절역: {
@@ -2705,9 +2707,10 @@ export const response_2: SuggestResponse = {
   ],
 };
 
-const response_3: SuggestResponse = {
+export const response_3: SuggestResponse = {
   location: {
-    address: "홍대입구역2호선",
+    start: "홍대입구역 2호선",
+    end: "의정부역1호선",
   },
   stationInfo: {
     이안동: {
@@ -3093,13 +3096,6 @@ const response_3: SuggestResponse = {
           route: "간선:761",
           routeId: "111000014",
           stationList: ["세명컴퓨터고등학교(중)"],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -3890,13 +3886,6 @@ const response_3: SuggestResponse = {
           stationList: ["연신내역.물빛공원", "세명컴퓨터고등학교(중)"],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -3985,13 +3974,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -4077,13 +4059,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -4177,13 +4152,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -4280,13 +4248,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -4379,13 +4340,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -4473,13 +4427,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -4577,13 +4524,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -4684,13 +4624,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -4787,13 +4720,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -4887,13 +4813,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -4995,13 +4914,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -5091,13 +5003,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5201,13 +5106,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -5308,13 +5206,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -5403,13 +5294,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5516,13 +5400,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -5626,13 +5503,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -5733,13 +5603,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5845,13 +5708,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5960,13 +5816,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -6072,13 +5921,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -6189,13 +6031,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -6303,13 +6138,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -6422,13 +6250,6 @@ const response_3: SuggestResponse = {
           ],
         },
         {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
-        },
-        {
           mode: "BUS",
           sectionTime: 3780,
           route: "일반:34",
@@ -6538,13 +6359,6 @@ const response_3: SuggestResponse = {
             "연신내역.물빛공원",
             "세명컴퓨터고등학교(중)",
           ],
-        },
-        {
-          mode: "WALK",
-          sectionTime: 0,
-          route: null,
-          routeId: null,
-          stationList: ["세명컴퓨터고등학교(중)", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",

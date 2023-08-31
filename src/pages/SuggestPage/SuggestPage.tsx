@@ -12,17 +12,16 @@ import {
 } from "./styles";
 import { Input, Select } from "antd";
 import { CloseOutlined, SwapOutlined } from "@ant-design/icons";
-import { useResultListSelector } from "@/flux";
 import { SuggestCard } from "./components";
 import { nanoid } from "@reduxjs/toolkit";
 import white_notch from "@/assets/white_notch.png";
 import { TaxiRangeLabel } from "@/components";
 import { FlexRow, Spacer } from "@/components/Base";
-import { response_1 } from "@/constant/Response.const";
+import { response_1, response_2, response_3 } from "@/constant/Response.const";
+import { Info } from "@/interface";
 
 const SuggestPage: React.FC = () => {
   const [option, setOption] = useState("");
-  const resultList = useResultListSelector();
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -37,11 +36,17 @@ const SuggestPage: React.FC = () => {
           <InputContainer>
             <Spacer space={15} />
             <InputWrap>
-              <Input placeholder="출발지 주소"></Input>
+              <Input
+                placeholder="출발지 주소"
+                defaultValue={response_2.location.start}
+              ></Input>
               <CloseOutlined />
             </InputWrap>
             <InputWrap>
-              <Input placeholder="목적지 주소"></Input>
+              <Input
+                placeholder="목적지 주소"
+                defaultValue={response_2.location.end}
+              ></Input>
               <SwapOutlined />
             </InputWrap>
           </InputContainer>
@@ -73,7 +78,7 @@ const SuggestPage: React.FC = () => {
         </FlexRow>
         <Divider />
         <CardContainer>
-          {response_1.infoList.map((info) => (
+          {response_2.infoList.map((info: Info) => (
             <SuggestCard key={nanoid()} info={info} />
           ))}
         </CardContainer>

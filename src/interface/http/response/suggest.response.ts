@@ -1,5 +1,3 @@
-import { ModeEnum } from "@/enums";
-
 export interface SuggestResponse {
   location: Location;
   stationInfo: StationInfo;
@@ -7,7 +5,8 @@ export interface SuggestResponse {
 }
 
 export interface Location {
-  address: string;
+  start: string;
+  end: string;
 }
 
 export interface StationInfo {
