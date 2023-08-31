@@ -4,14 +4,65 @@ import { SvgIcon } from "..";
 import { ReactComponent as Taxi } from "@/assets/svg/taxi.svg";
 import { ReactComponent as Bus } from "@/assets/svg/bug.svg";
 import { Label, Bar } from "./styles";
-import { H5B } from "@/theme";
+import { BS, H5B } from "@/theme";
+import { Info } from "@/interface";
+import { ModeEnum } from "@/enums";
 
 interface RangeBarProps {
-  taxiFare: number;
-  wastedTime: number;
+  taxiFare?: number;
+  wastedTime?: number;
+  info?: Info;
 }
 
-const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime }) => {
+const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime, info }) => {
+  const RenderBar = (mode: ModeEnum, sectionTime: number) => {
+    switch (mode) {
+      case ModeEnum.BUS: {
+        return (
+          <>
+            <Label style={{ backgroundColor: "#34447F" }}>
+              <SvgIcon icon={<Bus />} />
+            </Label>
+            <Bar
+              style={{
+                backgroundColor: "#34447F",
+                borderTopRightRadius: "6px",
+                borderBottomRightRadius: "6px",
+              }}
+            >
+              <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+            </Bar>
+          </>
+        );
+      }
+      case ModeEnum.TAXI: {
+        return (
+          <>
+            <Label>
+              <SvgIcon icon={<Taxi />} />
+            </Label>
+            <Bar>
+              <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+            </Bar>
+          </>
+        );
+      }
+      case ModeEnum.WALK: {
+        return (
+          <Bar
+            style={{
+              backgroundColor: "#D0D0D0",
+              borderTopRightRadius: "6px",
+              borderBottomRightRadius: "6px",
+            }}
+          >
+            <BS color="white">{`${Math.ceil(sectionTime / 60)}분`}</BS>
+          </Bar>
+        );
+      }
+    }
+  };
+
   return (
     <FlexColumn
       style={{
@@ -22,8 +73,12 @@ const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime }) => {
       }}
     >
       <FlexRow style={{ gap: "20px" }}>
-        <H5B>{`${taxiFare}원`}</H5B>
-        <H5B>{`${Math.floor(wastedTime / 60)}분`}</H5B>
+        {taxiFare && wastedTime && (
+          <>
+            <H5B>{`${taxiFare.toLocaleString()}원`}</H5B>
+            <H5B>{`${Math.floor(wastedTime / 60)}분`}</H5B>
+          </>
+        )}
       </FlexRow>
       <FlexRow
         style={{
@@ -32,27 +87,10 @@ const RangeBar: React.FC<RangeBarProps> = ({ taxiFare, wastedTime }) => {
           width: "100%",
         }}
       >
-        <Label>
-          <SvgIcon icon={<Taxi />} />
-        </Label>
-        <Bar />
-        <Label style={{ backgroundColor: "#34447F" }}>
-          <SvgIcon icon={<Bus />} />
-        </Label>
-        <Bar
-          style={{
-            backgroundColor: "#34447F",
-            borderTopRightRadius: "6px",
-            borderBottomRightRadius: "6px",
-          }}
-        />
-        <Bar
-          style={{
-            backgroundColor: "#D0D0D0",
-            borderTopRightRadius: "6px",
-            borderBottomRightRadius: "6px",
-          }}
-        />
+        {info &&
+          info.steps.map((step) =>
+            RenderBar(step.mode as ModeEnum, step.sectionTime)
+          )}
       </FlexRow>
     </FlexColumn>
   );

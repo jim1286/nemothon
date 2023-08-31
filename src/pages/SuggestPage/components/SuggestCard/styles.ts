@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  height: 337px;
+  height: 150px;
   width: 100%;
 `;
 
@@ -19,7 +19,7 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
-  height: 230px;
+  height: 300px;
   width: 100%;
   padding: 20px;
   display: flex;

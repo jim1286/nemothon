@@ -12,3 +12,9 @@ export const useMoneyRangeListSelector = () => {
 
   return moneyRange;
 };
+
+export const useClickedInfoSelector = () => {
+  const info = useSelector((state: RootState) => state.route.info);
+
+  return info;
+};

@@ -18,7 +18,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import white_notch from "@/assets/white_notch.png";
 import { TaxiRangeLabel } from "@/components";
 import { FlexRow, Spacer } from "@/components/Base";
-import { response } from "@/constant/Response.const";
+import { response_1 } from "@/constant/Response.const";
 
 const SuggestPage: React.FC = () => {
   const [option, setOption] = useState("");
@@ -73,8 +73,8 @@ const SuggestPage: React.FC = () => {
         </FlexRow>
         <Divider />
         <CardContainer>
-          {response.InfoList.map((result) => (
-            <SuggestCard key={nanoid()} result={result} />
+          {response_1.infoList.map((info) => (
+            <SuggestCard key={nanoid()} info={info} />
           ))}
         </CardContainer>
       </Body>

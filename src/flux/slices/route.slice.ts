@@ -1,9 +1,10 @@
-import { MoneyRange, Result } from "@/interface";
+import { Info, MoneyRange, Result } from "@/interface";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface TempState {
   resultList: Result[];
   moneyRange: MoneyRange;
+  info?: Info;
 }
 
 const initialState: TempState = {
@@ -12,6 +13,7 @@ const initialState: TempState = {
     minMoney: 4800,
     maxMoney: 100000,
   },
+  info: undefined,
 };
 
 export const routeSlice = createSlice({
@@ -24,8 +26,12 @@ export const routeSlice = createSlice({
     setResultList: (state, action: PayloadAction<Result[]>) => {
       state.resultList = action.payload;
     },
+    setClickedInfo: (state, action: PayloadAction<Info>) => {
+      state.info = action.payload;
+    },
   },
 });
 
-export const { setResultList, setMoneyRange } = routeSlice.actions;
+export const { setResultList, setMoneyRange, setClickedInfo } =
+  routeSlice.actions;
 export default routeSlice.reducer;

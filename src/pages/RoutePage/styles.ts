@@ -4,9 +4,11 @@ export const Container = styled.div`
   width: 393px;
   height: 750px;
   border: 1px solid;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
   border-radius: 20px;
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
@@ -36,6 +38,8 @@ export const Body = styled.div`
 export const RangeWrap = styled.div`
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const RouteWrap = styled.div`
@@ -61,7 +65,7 @@ export const Label = styled.div`
 
 export const ColumnBar = styled.div`
   width: 12px;
-  height: 150px;
+  height: 120px;
   background: #777;
 `;
 
@@ -75,4 +79,13 @@ export const TaxiLabel = styled.div`
   justify-content: center;
   margin-left: auto;
   cursor: pointer;
+`;
+
+export const RangeFooter = styled.div`
+  width: 200px;
+  height: 40px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

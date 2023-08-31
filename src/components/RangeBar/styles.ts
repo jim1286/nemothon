@@ -11,6 +11,8 @@ export const Label = styled.div`
 `;
 
 export const Bar = styled.div`
+  display: flex;
+  justify-content: center;
   width: 50%;
   height: 12px;
   background-color: #f57c2c;
