@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface BarProps {
+interface BarWrapProps {
   percent: number;
 }
 
@@ -14,7 +14,7 @@ export const Label = styled.div`
   justify-content: center;
 `;
 
-export const Bar = styled.div<BarProps>`
+export const BarWrap = styled.div<BarWrapProps>`
   display: flex;
   justify-content: center;
   width: ${({ percent }) => percent}%;

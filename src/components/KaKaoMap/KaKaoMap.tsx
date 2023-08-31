@@ -67,8 +67,8 @@ const KaKaoMap: React.FC<KaKaoMapProps> = ({ address, onClick }) => {
             title={"목적지"}
             description={"목적지로 설정하시겠습니까?"}
             onConfirm={onClick}
-            okText="Yes"
-            cancelText="No"
+            okText="예"
+            cancelText="아니요"
             icon={null}
             style={{
               width: "200px",

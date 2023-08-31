@@ -43,9 +43,13 @@ const MapPage: React.FC = () => {
         <Input
           placeholder="목적지를 입력하세요."
           onChange={(e) => setInput(e.target.value)}
-          onClick={handleSearch}
         />
-        <Button icon={<SearchOutlined />} type="primary" />
+        <Button
+          icon={<SearchOutlined />}
+          onClick={handleSearch}
+          type="primary"
+          style={{ backgroundColor: "#F57C2C" }}
+        />
         <TaxiRangeLabel
           style={{
             top: "40px",

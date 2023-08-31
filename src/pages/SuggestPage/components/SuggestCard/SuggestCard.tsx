@@ -4,7 +4,7 @@ import { Info } from "@/interface";
 import { RangeBar } from "@/components";
 import { setClickedInfo, useAppDispatch } from "@/flux";
 import { useNavigate } from "react-router-dom";
-import { H5B } from "@/theme";
+import { BB } from "@/theme";
 import { FlexRow } from "@/components/Base";
 
 interface SuggestCardProps {
@@ -22,10 +22,12 @@ const SuggestCard: React.FC<SuggestCardProps> = ({ info }) => {
 
   return (
     <Container onClick={handleClick}>
-      <FlexRow style={{ justifyContent: "center", paddingTop: "15px" }}>
-        <H5B color="red">{`대중교통보다 ${Math.ceil(
+      <FlexRow
+        style={{ justifyContent: "center", paddingTop: "15px", width: "340px" }}
+      >
+        <BB color="red">{`대중교통보다 ${Math.ceil(
           info.summary.savedTime / 60
-        )}분 빠르고 ${info.summary.savedMoney}원 아낄 수 있어요! `}</H5B>
+        )}분 빠르고 ${info.summary.savedMoney}원 아낄 수 있어요! `}</BB>
       </FlexRow>
       <Body>
         <RangeBar
