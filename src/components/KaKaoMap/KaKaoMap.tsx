@@ -2,7 +2,6 @@ import { Map, CustomOverlayMap } from "react-kakao-maps-sdk";
 import React, { useEffect, useState } from "react";
 import { Popconfirm, notification } from "antd";
 import { BR } from "@/theme";
-import { RocketOutlined } from "@ant-design/icons";
 import { ReactComponent as LocationOn } from "@/assets/svg/location_on.svg";
 import { SvgIcon } from "..";
 

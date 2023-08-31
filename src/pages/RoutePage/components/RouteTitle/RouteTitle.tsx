@@ -9,6 +9,7 @@ import { ReactComponent as Down } from "@/assets/svg/down.svg";
 import { useClickedInfoSelector } from "@/flux";
 import { TaxiLabel } from "./styles";
 import { Click } from "../../RoutePage";
+import { nanoid } from "@reduxjs/toolkit";
 
 interface RouteTitleProps {
   step: Step;
@@ -62,7 +63,10 @@ const RouteTitle: React.FC<RouteTitleProps> = ({
           <Spacer space={20} />
           {clickList[index].clicked &&
             step.stationList.map((station) => (
-              <BXS style={{ height: "35px" }}>{`${station}`}</BXS>
+              <BXS
+                key={nanoid()}
+                style={{ height: "35px" }}
+              >{`${station}`}</BXS>
             ))}
         </FlexColumn>
       );
