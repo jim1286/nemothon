@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  height: 300px;
+  height: 337px;
   width: 100%;
 `;
 
@@ -12,7 +12,7 @@ export const Divider = styled.div`
 `;
 
 export const Header = styled.div`
-  height: 70px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -23,6 +23,7 @@ export const Body = styled.div`
   width: 100%;
   padding: 20px;
   display: flex;
+  cursor: pointer;
 `;
 
 export const Label = styled.div`
@@ -33,12 +34,6 @@ export const Label = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const RangeBar = styled.div`
-  width: 50%;
-  height: 12px;
-  background-color: #f57c2c;
 `;
 
 export const ColumnBar = styled.div`

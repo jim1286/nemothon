@@ -117,7 +117,11 @@ const MapPage: React.FC = () => {
           onChange={(e) => setInput(e.target.value)}
         />
         <Button icon={<SearchOutlined />} type="primary" />
-        <TaxiRangeLabel />
+        <TaxiRangeLabel
+          style={{
+            top: "40px",
+          }}
+        />
       </FormWrap>
       <MapWrap>
         <KaKaoMap address={address} onClick={handleClick} />

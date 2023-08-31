@@ -18,7 +18,11 @@ import {
 import { MoneyRange } from "@/interface";
 import "./model.css";
 
-const TaxiRangeLabel: React.FC = () => {
+interface TaxiRangeLabelProps {
+  style?: React.CSSProperties;
+}
+
+const TaxiRangeLabel: React.FC<TaxiRangeLabelProps> = ({ style }) => {
   const moneyRange = useMoneyRangeListSelector();
   const dispatch = useAppDispatch();
   const [money, setMoney] = useState<MoneyRange>({
@@ -59,7 +63,7 @@ const TaxiRangeLabel: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container style={style}>
       <TaxiLabelWrap onClick={showModal}>
         <SvgIcon icon={<Taxi />} />
         <BM color="white">{`${moneyRange.minMoney.toLocaleString()}원`}</BM>

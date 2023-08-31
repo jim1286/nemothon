@@ -1,6 +1,6 @@
 import App from "@/App";
 import { Error, MainWrap } from "@/components";
-import { MapPage, RangeMoneyPage, SuggestPage } from "@/pages";
+import { MapPage, RangeMoneyPage, RoutePage, SuggestPage } from "@/pages";
 import { createBrowserRouter } from "react-router-dom";
 
 const Router = createBrowserRouter([
@@ -24,6 +24,10 @@ const Router = createBrowserRouter([
           {
             path: "/suggest",
             element: <SuggestPage />,
+          },
+          {
+            path: "/id",
+            element: <RoutePage />,
           },
         ],
       },

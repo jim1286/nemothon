@@ -10,18 +10,26 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
+  position: absolute;
   width: 393px;
   height: 54px;
+  z-index: 1000;
 `;
 
 export const Body = styled.div`
   width: 393px;
-  height: 696px;
+  height: 750px;
+
+  .ant-select-selector {
+    border: none !important;
+  }
 `;
 
 export const Header = styled.div`
   width: 100%;
   height: 150px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   position: relative;
   display: flex;
   align-items: center;
@@ -47,8 +55,24 @@ export const InputWrap = styled.div`
 
 export const CardContainer = styled.div`
   width: 99%;
-  height: 535px;
+  height: 485px;
   overflow-y: auto;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+`;
+
+export const Divider = styled.div`
+  background: #f3f3f3;
+  width: 100%;
+  height: 3px;
+`;
+
+export const SelectWrap = styled.div`
+  width: 100%;
+
+  background-color: rebeccapurple;
+`;
+
+export const Gap = styled.div`
+  width: 10px;
 `;
