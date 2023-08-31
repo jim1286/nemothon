@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f9f9f9;
+    box-shadow: inset 0px 0px 5px white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 !important;
+}
+
+.ant-modal-header {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.ant-modal-content {
+  border-radius: 8px !important;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #e6f7ff !important;
+}
+
+.szh-menu__item:hover {
+  background: #fff4e6 !important;
+}
+
+.szh-menu__divider {
+  margin: 0 !important;
+}
+
+.szh-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ant-popover-inner {
+  border-radius: 4px !important;
+}
+
+.ant-popover-inner-content {
+  padding: 0 !important;
+}
+
+#sortSelect {
+  padding-top: 0 !important;
+  top: 20px !important;
+  left: 17px !important;
+}
+
+.szh-menu__item--type-radio::before {
+  content: "" !important;
+}
+
+.szh-menu__item--checked {
+  background: #f0f2f5;
+}
+
+.szh-menu__header,
+.szh-menu__item {
+  width: 185px !important;
+  padding: 8px 12px !important;
+}
+
+.ant-modal-confirm {
+  width: 572px !important;
+}
+
+.ant-modal-confirm-title {
+  font-family: "Noto Sans KR";
+  font-weight: bold !important;
+  font-size: 16px !important;
+  padding-bottom: 10px;
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("fonts/pretendard/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("fonts/pretendard/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("fonts/pretendard/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/pretendard/Pretendard-Regular.woff") format("woff");
+}
