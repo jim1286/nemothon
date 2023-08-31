@@ -1,5 +1,5 @@
 import React from "react";
-import { Body, Container, Header } from "./styles";
+import { Body, Container, Header, ImageWrap } from "./styles";
 import notch from "@/assets/notch.png";
 import white_notch from "@/assets/white_notch.png";
 
@@ -11,12 +11,7 @@ interface PageContainerProps {
 const PageContainer: React.FC<PageContainerProps> = ({ children, image }) => {
   return (
     <Container>
-      <img
-        src={image}
-        width="393px"
-        height="852px"
-        style={{ borderRadius: "20px", position: "absolute", zIndex: "-1" }}
-      />
+      <ImageWrap src={image} />
       <Header
         src={image ? white_notch : notch}
         style={{ position: "absolute", zIndex: "9999" }}

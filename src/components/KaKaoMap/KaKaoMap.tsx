@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Popconfirm, notification } from "antd";
 import { BR } from "@/theme";
 import { RocketOutlined } from "@ant-design/icons";
+import { ReactComponent as LocationOn } from "@/assets/svg/location_on.svg";
+import { SvgIcon } from "..";
 
 interface KaKaoMapProps {
   address: string;
@@ -64,28 +66,19 @@ const KaKaoMap: React.FC<KaKaoMapProps> = ({ address, onClick }) => {
           <Popconfirm
             placement="top"
             title={"목적지"}
-            description={"설명"}
+            description={"목적지로 설정하시겠습니까?"}
             onConfirm={onClick}
             okText="Yes"
             cancelText="No"
+            icon={null}
             style={{
               width: "200px",
               height: "100px",
             }}
           >
-            <div
-              style={{
-                width: "50px",
-                height: "50px",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "lightGray",
-              }}
-            >
-              <RocketOutlined />
-            </div>
+            <>
+              <SvgIcon icon={<LocationOn />} />
+            </>
           </Popconfirm>
         </CustomOverlayMap>
       )}

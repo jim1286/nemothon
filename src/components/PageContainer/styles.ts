@@ -20,3 +20,11 @@ export const Body = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const ImageWrap = styled.img`
+  position: absolute;
+  width: 393px;
+  height: 852px;
+  border-radius: 20px;
+  z-index: -1;
+`;

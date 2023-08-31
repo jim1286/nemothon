@@ -57,6 +57,7 @@ const RangeMoneyPage: React.FC = () => {
     <PageContainer image={taxi}>
       <RangeWrap>
         <RangeHeader>
+          <H5M color="white">{`사용 가능한`}</H5M>
           <H5M color="white">{`택시 요금을 설정해 주세요`}</H5M>
         </RangeHeader>
         <RangeBody>
@@ -91,7 +92,11 @@ const RangeMoneyPage: React.FC = () => {
         <RangeFooter>
           <ButtonWrap>
             <Button onClick={handleReset}>{`초기화`}</Button>
-            <Button type="primary" onClick={handleClick}>{`완료`}</Button>
+            <Button
+              type="primary"
+              onClick={handleClick}
+              style={{ backgroundColor: "#F57C2C", width: "100px" }}
+            >{`완료`}</Button>
           </ButtonWrap>
         </RangeFooter>
       </RangeWrap>
