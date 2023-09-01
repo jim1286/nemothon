@@ -28,7 +28,7 @@ const RouteHeader: React.FC<RouteHeaderProps> = () => {
           onClick={() => navigate("/suggest")}
         />
         <Input
-          defaultValue={`${response_3.location.start} -> ${response_3.location.end}`}
+          defaultValue={`${response_1.location.start} -> ${response_1.location.end}`}
         />
         <SvgIcon icon={<Close />} style={{ cursor: "pointer" }} />
       </FlexRow>

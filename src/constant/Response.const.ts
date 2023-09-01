@@ -3,7 +3,7 @@ import { SuggestResponse } from "@/interface";
 export const response_1: SuggestResponse = {
   location: {
     start: "경기 용인시 기흥구 동백1로 31",
-    end: "강남역 카카오 프렌즈",
+    end: "강남대로 429",
   },
   stationInfo: {
     "초당중학교.삼부르네상스아파트": {
@@ -141,7 +141,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 377,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백이마트"],
+          stationList: ["강남대로 429", "동백이마트"],
         },
         {
           mode: "BUS",
@@ -185,7 +185,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 474,
           route: null,
           routeId: null,
-          stationList: ["출발지", "갈천마을"],
+          stationList: ["강남대로 429", "갈천마을"],
         },
         {
           mode: "BUS",
@@ -226,7 +226,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 440,
           route: null,
           routeId: null,
-          stationList: ["출발지", "어정풍림아파트"],
+          stationList: ["강남대로 429", "어정풍림아파트"],
         },
         {
           mode: "BUS",
@@ -268,7 +268,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 523,
           route: null,
           routeId: null,
-          stationList: ["출발지", "지석역"],
+          stationList: ["강남대로 429", "지석역"],
         },
         {
           mode: "BUS",
@@ -308,7 +308,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 536,
           route: null,
           routeId: null,
-          stationList: ["출발지", "어정역"],
+          stationList: ["강남대로 429", "어정역"],
         },
         {
           mode: "BUS",
@@ -351,7 +351,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 597,
           route: null,
           routeId: null,
-          stationList: ["출발지", "어정삼거리.강남마을"],
+          stationList: ["강남대로 429", "어정삼거리.강남마을"],
         },
         {
           mode: "BUS",
@@ -390,7 +390,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 650,
           route: null,
           routeId: null,
-          stationList: ["출발지", "강남대역.강남대입구"],
+          stationList: ["강남대로 429", "강남대역.강남대입구"],
         },
         {
           mode: "BUS",
@@ -428,7 +428,10 @@ export const response_1: SuggestResponse = {
           sectionTime: 570,
           route: null,
           routeId: null,
-          stationList: ["출발지", "두산위브더제니스.호수마을.자연엔데시앙"],
+          stationList: [
+            "강남대로 429",
+            "두산위브더제니스.호수마을.자연엔데시앙",
+          ],
         },
         {
           mode: "BUS",
@@ -473,7 +476,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 384,
           route: null,
           routeId: null,
-          stationList: ["출발지", "쥬네브상가"],
+          stationList: ["강남대로 429", "쥬네브상가"],
         },
         {
           mode: "BUS",
@@ -523,7 +526,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 312,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백2동행정복지센터"],
+          stationList: ["강남대로 429", "동백2동행정복지센터"],
         },
         {
           mode: "BUS",
@@ -574,7 +577,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 262,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백역.성산마을서해그랑블"],
+          stationList: ["강남대로 429", "동백역.성산마을서해그랑블"],
         },
         {
           mode: "BUS",
@@ -626,7 +629,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 119,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백경남아너스빌"],
+          stationList: ["강남대로 429", "동백경남아너스빌"],
         },
         {
           mode: "BUS",
@@ -679,7 +682,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 66,
           route: null,
           routeId: null,
-          stationList: ["출발지", "초당중학교.삼부르네상스아파트"],
+          stationList: ["강남대로 429", "초당중학교.삼부르네상스아파트"],
         },
         {
           mode: "BUS",
@@ -733,7 +736,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 618,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백소방서.동일하이빌.롯데캐슬"],
+          stationList: ["강남대로 429", "동백소방서.동일하이빌.롯데캐슬"],
         },
         {
           mode: "BUS",
@@ -782,7 +785,7 @@ export const response_1: SuggestResponse = {
           sectionTime: 758,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동백고.풍림코아루.호수마을서해그랑블"],
+          stationList: ["강남대로 429", "동백고.풍림코아루.호수마을서해그랑블"],
         },
         {
           mode: "BUS",
@@ -1036,7 +1039,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 637,
           route: null,
           routeId: null,
-          stationList: ["출발지", "응암역.신사오거리"],
+          stationList: ["스시진초밥", "응암역.신사오거리"],
         },
         {
           mode: "BUS",
@@ -1095,7 +1098,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 613,
           route: null,
           routeId: null,
-          stationList: ["출발지", "응암역2번출구"],
+          stationList: ["스시진초밥", "응암역2번출구"],
         },
         {
           mode: "BUS",
@@ -1155,7 +1158,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 659,
           route: null,
           routeId: null,
-          stationList: ["출발지", "신흥시장"],
+          stationList: ["스시진초밥", "신흥시장"],
         },
         {
           mode: "BUS",
@@ -1213,7 +1216,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 769,
           route: null,
           routeId: null,
-          stationList: ["출발지", "새절역"],
+          stationList: ["스시진초밥", "새절역"],
         },
         {
           mode: "BUS",
@@ -1270,7 +1273,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 937,
           route: null,
           routeId: null,
-          stationList: ["출발지", "증산역.증산동주민센터"],
+          stationList: ["스시진초밥", "증산역.증산동주민센터"],
         },
         {
           mode: "BUS",
@@ -1324,7 +1327,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 891,
           route: null,
           routeId: null,
-          stationList: ["출발지", "연서중학교입구"],
+          stationList: ["스시진초밥", "연서중학교입구"],
         },
         {
           mode: "BUS",
@@ -1379,7 +1382,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 868,
           route: null,
           routeId: null,
-          stationList: ["출발지", "와산교"],
+          stationList: ["스시진초밥", "와산교"],
         },
         {
           mode: "BUS",
@@ -1435,7 +1438,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1066,
           route: null,
           routeId: null,
-          stationList: ["출발지", "증산종합시장.증산중학교입구"],
+          stationList: ["스시진초밥", "증산종합시장.증산중학교입구"],
         },
         {
           mode: "BUS",
@@ -1488,7 +1491,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 688,
           route: null,
           routeId: null,
-          stationList: ["출발지", "역촌초등학교"],
+          stationList: ["스시진초밥", "역촌초등학교"],
         },
         {
           mode: "BUS",
@@ -1549,7 +1552,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 268,
           route: null,
           routeId: null,
-          stationList: ["출발지", "대조시장"],
+          stationList: ["스시진초밥", "대조시장"],
         },
         {
           mode: "BUS",
@@ -1625,7 +1628,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 326,
           route: null,
           routeId: null,
-          stationList: ["출발지", "역촌오거리"],
+          stationList: ["스시진초밥", "역촌오거리"],
         },
         {
           mode: "BUS",
@@ -1700,7 +1703,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 390,
           route: null,
           routeId: null,
-          stationList: ["출발지", "역촌역.역촌오거리"],
+          stationList: ["스시진초밥", "역촌역.역촌오거리"],
         },
         {
           mode: "BUS",
@@ -1774,7 +1777,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 451,
           route: null,
           routeId: null,
-          stationList: ["출발지", "삼성타운"],
+          stationList: ["스시진초밥", "삼성타운"],
         },
         {
           mode: "BUS",
@@ -1844,7 +1847,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 2247,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목동8단지.한전"],
+          stationList: ["스시진초밥", "목동8단지.한전"],
         },
         {
           mode: "BUS",
@@ -1884,7 +1887,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 2137,
           route: null,
           routeId: null,
-          stationList: ["출발지", "하이스트학원.종로학원"],
+          stationList: ["스시진초밥", "하이스트학원.종로학원"],
         },
         {
           mode: "BUS",
@@ -1925,7 +1928,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 624,
           route: null,
           routeId: null,
-          stationList: ["출발지", "구산역3번출구.예일여고"],
+          stationList: ["스시진초밥", "구산역3번출구.예일여고"],
         },
         {
           mode: "BUS",
@@ -1988,7 +1991,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 337,
           route: null,
           routeId: null,
-          stationList: ["출발지", "양광교회"],
+          stationList: ["스시진초밥", "양광교회"],
         },
         {
           mode: "BUS",
@@ -2065,7 +2068,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 2077,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목동7단지"],
+          stationList: ["스시진초밥", "목동7단지"],
         },
         {
           mode: "BUS",
@@ -2107,7 +2110,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 227,
           route: null,
           routeId: null,
-          stationList: ["출발지", "불광역4번출구"],
+          stationList: ["스시진초밥", "불광역4번출구"],
         },
         {
           mode: "BUS",
@@ -2185,7 +2188,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 700,
           route: null,
           routeId: null,
-          stationList: ["출발지", "역말사거리"],
+          stationList: ["스시진초밥", "역말사거리"],
         },
         {
           mode: "BUS",
@@ -2247,7 +2250,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1868,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목동3단지"],
+          stationList: ["스시진초밥", "목동3단지"],
         },
         {
           mode: "BUS",
@@ -2292,7 +2295,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1828,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목동2단지"],
+          stationList: ["스시진초밥", "목동2단지"],
         },
         {
           mode: "BUS",
@@ -2338,7 +2341,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 2014,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목1동주민센터"],
+          stationList: ["스시진초밥", "목1동주민센터"],
         },
         {
           mode: "BUS",
@@ -2381,7 +2384,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1933,
           route: null,
           routeId: null,
-          stationList: ["출발지", "목동4단지상가.목동종합운동장"],
+          stationList: ["스시진초밥", "목동4단지상가.목동종합운동장"],
         },
         {
           mode: "BUS",
@@ -2425,7 +2428,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1771,
           route: null,
           routeId: null,
-          stationList: ["출발지", "월촌중학교.목동1단지"],
+          stationList: ["스시진초밥", "월촌중학교.목동1단지"],
         },
         {
           mode: "BUS",
@@ -2472,7 +2475,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1655,
           route: null,
           routeId: null,
-          stationList: ["출발지", "신목동역"],
+          stationList: ["스시진초밥", "신목동역"],
         },
         {
           mode: "BUS",
@@ -2521,7 +2524,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1721,
           route: null,
           routeId: null,
-          stationList: ["출발지", "신목동역-서울지방식품의약품안전청"],
+          stationList: ["스시진초밥", "신목동역-서울지방식품의약품안전청"],
         },
         {
           mode: "BUS",
@@ -2569,7 +2572,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1617,
           route: null,
           routeId: null,
-          stationList: ["출발지", "마포농수산물시장.월드컵공원"],
+          stationList: ["스시진초밥", "마포농수산물시장.월드컵공원"],
         },
         {
           mode: "BUS",
@@ -2620,7 +2623,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1635,
           route: null,
           routeId: null,
-          stationList: ["출발지", "영등포아리수정수센터"],
+          stationList: ["스시진초밥", "영등포아리수정수센터"],
         },
         {
           mode: "BUS",
@@ -2670,7 +2673,7 @@ export const response_2: SuggestResponse = {
           sectionTime: 1658,
           route: null,
           routeId: null,
-          stationList: ["출발지", "월드컵경기장서측.문화비축기지"],
+          stationList: ["스시진초밥", "월드컵경기장서측.문화비축기지"],
         },
         {
           mode: "BUS",
@@ -3093,7 +3096,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 948,
           route: null,
           routeId: null,
-          stationList: ["출발지", "KT가좌지사"],
+          stationList: ["홍대입구역2호선", "KT가좌지사"],
         },
         {
           mode: "BUS",
@@ -3192,7 +3195,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 857,
           route: null,
           routeId: null,
-          stationList: ["출발지", "북가좌초교사거리"],
+          stationList: ["홍대입구역2호선", "북가좌초교사거리"],
         },
         {
           mode: "BUS",
@@ -3293,7 +3296,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 888,
           route: null,
           routeId: null,
-          stationList: ["출발지", "북가좌2동주민센터"],
+          stationList: ["홍대입구역2호선", "북가좌2동주민센터"],
         },
         {
           mode: "BUS",
@@ -3393,7 +3396,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1056,
           route: null,
           routeId: null,
-          stationList: ["출발지", "동도하이츠아파트"],
+          stationList: ["홍대입구역2호선", "동도하이츠아파트"],
         },
         {
           mode: "BUS",
@@ -3491,7 +3494,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1276,
           route: null,
           routeId: null,
-          stationList: ["출발지", "백련산SK뷰아이파크아파트"],
+          stationList: ["홍대입구역2호선", "백련산SK뷰아이파크아파트"],
         },
         {
           mode: "BUS",
@@ -3585,7 +3588,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1324,
           route: null,
           routeId: null,
-          stationList: ["출발지", "신진과학기술고등학교"],
+          stationList: ["홍대입구역2호선", "신진과학기술고등학교"],
         },
         {
           mode: "BUS",
@@ -3678,7 +3681,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1421,
           route: null,
           routeId: null,
-          stationList: ["출발지", "서부경찰서후문"],
+          stationList: ["홍대입구역2호선", "서부경찰서후문"],
         },
         {
           mode: "BUS",
@@ -3770,7 +3773,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1187,
           route: null,
           routeId: null,
-          stationList: ["출발지", "응암3동주민센터"],
+          stationList: ["홍대입구역2호선", "응암3동주민센터"],
         },
         {
           mode: "BUS",
@@ -3866,7 +3869,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1222,
           route: null,
           routeId: null,
-          stationList: ["출발지", "서서울농협본점"],
+          stationList: ["홍대입구역2호선", "서서울농협본점"],
         },
         {
           mode: "BUS",
@@ -3961,7 +3964,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1203,
           route: null,
           routeId: null,
-          stationList: ["출발지", "대림시장"],
+          stationList: ["홍대입구역2호선", "대림시장"],
         },
         {
           mode: "BUS",
@@ -4058,7 +4061,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 571,
           route: null,
           routeId: null,
-          stationList: ["출발지", "DMC.파크뷰자이"],
+          stationList: ["홍대입구역2호선", "DMC.파크뷰자이"],
         },
         {
           mode: "BUS",
@@ -4163,7 +4166,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 510,
           route: null,
           routeId: null,
-          stationList: ["출발지", "모래내시장.가좌역"],
+          stationList: ["홍대입구역2호선", "모래내시장.가좌역"],
         },
         {
           mode: "BUS",
@@ -4270,7 +4273,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1632,
           route: null,
           routeId: null,
-          stationList: ["출발지", "역촌역.역촌오거리"],
+          stationList: ["홍대입구역2호선", "역촌역.역촌오거리"],
         },
         {
           mode: "BUS",
@@ -4361,7 +4364,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1633,
           route: null,
           routeId: null,
-          stationList: ["출발지", "구산역1번출구"],
+          stationList: ["홍대입구역2호선", "구산역1번출구"],
         },
         {
           mode: "BUS",
@@ -4449,7 +4452,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1684,
           route: null,
           routeId: null,
-          stationList: ["출발지", "대조동주민센터"],
+          stationList: ["홍대입구역2호선", "대조동주민센터"],
         },
         {
           mode: "BUS",
@@ -4536,7 +4539,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1758,
           route: null,
           routeId: null,
-          stationList: ["출발지", "연신내역.물빛공원"],
+          stationList: ["홍대입구역2호선", "연신내역.물빛공원"],
         },
         {
           mode: "BUS",
@@ -4619,7 +4622,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1692,
           route: null,
           routeId: null,
-          stationList: ["출발지", "삼성타운"],
+          stationList: ["홍대입구역2호선", "삼성타운"],
         },
         {
           mode: "BUS",
@@ -4709,7 +4712,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 451,
           route: null,
           routeId: null,
-          stationList: ["출발지", "사천교"],
+          stationList: ["홍대입구역2호선", "사천교"],
         },
         {
           mode: "BUS",
@@ -4817,7 +4820,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 828,
           route: null,
           routeId: null,
-          stationList: ["출발지", "DMC센트레빌아파트"],
+          stationList: ["홍대입구역2호선", "DMC센트레빌아파트"],
         },
         {
           mode: "BUS",
@@ -4921,7 +4924,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 677,
           route: null,
           routeId: null,
-          stationList: ["출발지", "삼성래미안2차아파트"],
+          stationList: ["홍대입구역2호선", "삼성래미안2차아파트"],
         },
         {
           mode: "BUS",
@@ -5027,7 +5030,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1769,
           route: null,
           routeId: null,
-          stationList: ["출발지", "구산역1번출구.예일여고"],
+          stationList: ["홍대입구역2호선", "구산역1번출구.예일여고"],
         },
         {
           mode: "BUS",
@@ -5116,7 +5119,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 942,
           route: null,
           routeId: null,
-          stationList: ["출발지", "북가좌삼호.DMC아이파크아파트"],
+          stationList: ["홍대입구역2호선", "북가좌삼호.DMC아이파크아파트"],
         },
         {
           mode: "BUS",
@@ -5219,7 +5222,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1021,
           route: null,
           routeId: null,
-          stationList: ["출발지", "모래내우체국.증가교회"],
+          stationList: ["홍대입구역2호선", "모래내우체국.증가교회"],
         },
         {
           mode: "BUS",
@@ -5321,7 +5324,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 390,
           route: null,
           routeId: null,
-          stationList: ["출발지", "연희104고지앞.구성산회관"],
+          stationList: ["홍대입구역2호선", "연희104고지앞.구성산회관"],
         },
         {
           mode: "BUS",
@@ -5430,7 +5433,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 1896,
           route: null,
           routeId: null,
-          stationList: ["출발지", "세명컴퓨터고등학교(중)"],
+          stationList: ["홍대입구역2호선", "세명컴퓨터고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5506,7 +5509,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 2031,
           route: null,
           routeId: null,
-          stationList: ["출발지", "박석고개.신도고등학교(중)"],
+          stationList: ["홍대입구역2호선", "박석고개.신도고등학교(중)"],
         },
         {
           mode: "BUS",
@@ -5581,7 +5584,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 356,
           route: null,
           routeId: null,
-          stationList: ["출발지", "연희동대우아파트"],
+          stationList: ["홍대입구역2호선", "연희동대우아파트"],
         },
         {
           mode: "BUS",
@@ -5691,7 +5694,7 @@ export const response_3: SuggestResponse = {
           sectionTime: 306,
           route: null,
           routeId: null,
-          stationList: ["출발지", "홍대입구역"],
+          stationList: ["홍대입구역2호선", "홍대입구역"],
         },
         {
           mode: "BUS",

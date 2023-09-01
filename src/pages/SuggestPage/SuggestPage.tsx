@@ -39,14 +39,14 @@ const SuggestPage: React.FC = () => {
             <InputWrap>
               <Input
                 placeholder="출발지 주소"
-                defaultValue={response_3.location.start}
+                defaultValue={response_1.location.start}
               ></Input>
               <CloseOutlined />
             </InputWrap>
             <InputWrap>
               <Input
                 placeholder="목적지 주소"
-                defaultValue={response_3.location.end}
+                defaultValue={response_1.location.end}
               ></Input>
               <SwapOutlined />
             </InputWrap>
@@ -79,7 +79,7 @@ const SuggestPage: React.FC = () => {
         </FlexRow>
         <Divider />
         <CardContainer>
-          {response_3.infoList.map((info: Info) => {
+          {response_1.infoList.map((info: Info) => {
             if (
               moneyRangeList.minMoney > info.summary.taxiFare ||
               moneyRangeList.maxMoney < info.summary.taxiFare
