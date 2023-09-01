@@ -35,7 +35,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: orange;
+  background-color: #f57c2c;
 `;
 
 export const InputContainer = styled.div`
